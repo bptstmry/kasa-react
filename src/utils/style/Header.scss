@@ -1,0 +1,17 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        text-decoration: underline;
+    }
+    &__about {
+        margin-left: 40px;
+    }
+}

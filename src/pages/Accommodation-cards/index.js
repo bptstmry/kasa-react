@@ -3,6 +3,7 @@ import { housingListingsData } from "../../datas/housingListingsData";
 import "../../utils/style/Accommodation-cards.scss";
 import Rating from "../../components/Rating";
 import Accordion from "../../components/Accordion";
+import Carousel from "../../components/Carousel"
 
 export default function Accommodation() {
   const { id } = useParams();
@@ -18,11 +19,7 @@ export default function Accommodation() {
   return (
     <div>
       <div className="accomodation">
-        <img
-          src={hebergement.cover}
-          alt={hebergement.title}
-          className="accomodation__image"
-        ></img>
+      <Carousel images={hebergement.pictures} />
         <div className="accomodation__container">
           <div className="title">
             <h1>{hebergement.title}</h1>

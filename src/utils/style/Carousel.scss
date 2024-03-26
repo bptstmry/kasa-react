@@ -1,0 +1,33 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ajoutez cette ligne */
+    z-index: 1;
+}
+
+.image-container {
+    width: 100%;
+    position: relative; /* Ajoutez ceci */
+    display: flex; /* Ajoutez ceci */
+    justify-content: center; /* Ajoutez ceci */
+    align-items: center; /* Ajoutez ceci */
+}
+
+.arrow__left {
+    margin-right: -50px; /* Utilisez une marge négative */
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arrow__right {
+    margin-left: -50px; /* Utilisez une marge négative */
+    cursor: pointer;
+    z-index: 2;
+}
+
+.image-position {
+    position: absolute; /* Utilisez une position absolue */
+    bottom: 35px; /* Alignez-le au bas */
+    color: white;
+}

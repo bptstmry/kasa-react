@@ -35,3 +35,10 @@
     grid-column-gap: 60px;
   }
 }
+
+.accordions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 76px;
+}

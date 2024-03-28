@@ -1,51 +1,61 @@
 .accordion {
-    width: 70%;
+  width: 70%;
+  overflow: hidden;
+}
+
+.accordions {
+  overflow: hidden;
 }
 
 .accordion__title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #FF6060;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .accordion__content {
-    visibility: hidden;
-    height:0;   
-    overflow: hidden;
-    transition: all .2s ease-in;
-    padding: 15px;
-    background-color: #F6F6F673;
-    border-radius: 10px;
-    opacity: 0;
-    ul {
-        margin: 0;
-        padding: 0;
-    }
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+
+  transition: all 0.2s ease-in;
+  padding: 15px;
+  background-color: #f6f6f673;
+  border-radius: 10px;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  transition: all 300ms;
+  z-index: -1;
+  position: relative;
+  transform: translateY(-100%);
 }
 
 .active .accordion__content {
-    visibility: visible;
-    height: auto;
-    overflow: visible;
-    opacity : 1;
-  }
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  transform: translateY(0%);
+}
 
 .accordion__content--list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .accordion__arrow {
-    width: 15px;
-    transition: transform 0.2s ease-in; /* Correction de la transition */
-    cursor: pointer;
+  width: 15px;
+  transition: transform 0.2s ease-in; /* Correction de la transition */
+  cursor: pointer;
 }
 
 .active .accordion__arrow {
-    transform: rotate(-0.5turn); /* Correction de la rotation */
+  transform: rotate(-0.5turn); /* Correction de la rotation */
 }

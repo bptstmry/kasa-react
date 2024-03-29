@@ -1,18 +1,15 @@
 .bottom {
-  position: relative;
+  @include relative-position;
   height: 209px;
-  background-color: black;
+  background-color: $black;
   &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include absolute-position ($top: 45%, $left: 50%);
     transform: translate(-50%, -50%);
   }
   &__banner {
-    color: white;
-    position: absolute;
-    top: 80%;
-    left: 50%;
+    @include font ($weight: 500, $size: 24px);
+    color: $white;
+    @include absolute-position ($top: 75%, $left: 50%);
     transform: translate(-50%, -50%);
   }
 }

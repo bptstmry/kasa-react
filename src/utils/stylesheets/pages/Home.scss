@@ -20,11 +20,10 @@
 .home__container {
   margin-top: 43px;
   margin-bottom: 50px;
-  background-color: #f6f6f6;
+  background-color: $gray;
   width: 100%;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
+  @include flexbox ($justify: center);
   &__cards {
     padding: 56px;
     display: grid;

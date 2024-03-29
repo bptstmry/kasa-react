@@ -12,8 +12,8 @@ export default function About() {
         </div>
         <div className="about__center">
         <div className="about__accordion">
-          {about.map((item) => (
-            <Accordion title={item.title} content={item.content} />
+          {about.map((item, index) => (
+            <Accordion key={index} title={item.title} content={item.content} />
           ))}
         </div>
         </div>

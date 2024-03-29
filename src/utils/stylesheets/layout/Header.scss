@@ -1,13 +1,12 @@
 .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox ($justify : space-between, $align: center);
     margin-bottom: 50px;
 }
 
 .link {
     text-decoration: none;
-    color: black;
+    color: $black;
+    @include font ($weight: 500, $size: 24px);
     &:hover {
         text-decoration: underline;
     }

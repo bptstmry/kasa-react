@@ -7,11 +7,11 @@ export default function About() {
   const about = aboutListingsData;
   return (
     <>
-      <div className="topp">
+      <div className="about__top">
         <img src={image} alt="Plage sauvage" className="banner__img" />
         </div>
-        <div className="centerr">
-        <div className="accordion__about">
+        <div className="about__center">
+        <div className="about__accordion">
           {about.map((item) => (
             <Accordion title={item.title} content={item.content} />
           ))}

@@ -1,33 +1,34 @@
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Ajoutez cette ligne */
-    z-index: 1;
-}
-
-.image-container {
-    width: 100%;
-    position: relative; /* Ajoutez ceci */
-    display: flex; /* Ajoutez ceci */
-    justify-content: center; /* Ajoutez ceci */
-    align-items: center; /* Ajoutez ceci */
+.carousel {
+    @include flexbox ($justify: center, $align: center);
+    @include relative-position ($z-index: 1);
+    &__image {
+        width: 100%;
+        @include relative-position;
+        @include flexbox ($justify: center, $align: center);
+    }
+    &__position {
+        @include absolute-position;
+        @include font ($weight: 500, $size: 18px);
+        bottom: 25px; 
+        color: $white;
+    }
 }
 
 .arrow__left {
-    margin-right: -50px; /* Utilisez une marge négative */
-    z-index: 2;
+    @include relative-position ($left: 10px, $z-index: 2);
+    margin-right: -50px; 
     cursor: pointer;
 }
 
 .arrow__right {
-    margin-left: -50px; /* Utilisez une marge négative */
+    @include relative-position ($right: 10px, $z-index: 2);
+    margin-left: -50px; 
     cursor: pointer;
-    z-index: 2;
 }
 
-.image-position {
-    position: absolute; /* Utilisez une position absolue */
-    bottom: 35px; /* Alignez-le au bas */
-    color: white;
+.accomodation__image {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <div className="top">
-        <img src={image} alt="Plage sauvage" className="top__image" />
-        <div className="top__text">Chez vous, partout et ailleurs</div>
+      <div className="home">
+        <img src={image} alt="Plage sauvage" className="home__image" />
+        <div className="home__text">Chez vous, partout et ailleurs</div>
       </div>
 
       <div className="home__container">

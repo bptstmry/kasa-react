@@ -15,13 +15,13 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel-container">
+    <div className="carousel">
       <img src={arrowLeft} className="arrow__left" alt="arrow" onClick={goToPreviousSlide}></img>
-      <div className="image-container">
+      <div className="carousel__image">
         <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="accomodation__image"/>
       </div>
       <img src={arrowRight} className="arrow__right" alt="arrow"  onClick={goToNextSlide}></img>
-      <div className="image-position">{currentIndex + 1}/{totalImages}</div> {/* Témoin de position */}
+      <div className="carousel__position">{currentIndex + 1}/{totalImages}</div> {/* Témoin de position */}
     </div>
   );
 };

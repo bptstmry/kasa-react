@@ -1,0 +1,39 @@
+// position //
+@mixin absolute-position($top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+  }
+
+@mixin relative-position($top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
+    position: relative;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+// flexbox //
+
+  @mixin flexbox($display: flex, $direction: row, $justify: null, $align: null, $wrap: null, $gap: null) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    gap: $gap;
+  }
+
+
+  // font //
+  @mixin font($family: 'Montserrat', $size: null, $weight: normal, $style: normal, $line-height: normal) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $line-height;
+  } 

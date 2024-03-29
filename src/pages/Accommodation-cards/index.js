@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { housingListingsData } from "../../datas/housingListingsData";
 import Rating from "../../components/Rating";
 import Accordion from "../../components/Accordion";
-import Carousel from "../../components/Carousel"
+import Carousel from "../../components/Carousel";
 
 export default function Accommodation() {
   const { id } = useParams();
@@ -18,8 +18,8 @@ export default function Accommodation() {
   return (
     <div>
       <div className="accomodation">
-      <Carousel images={hebergement.pictures} />
-        <div className="accomodation__container">
+        <Carousel images={hebergement.pictures} />
+        <div className="accomodation__container_head">
           <div className="title">
             <h1>{hebergement.title}</h1>
             <p>{hebergement.location}</p>
@@ -32,7 +32,7 @@ export default function Accommodation() {
             ></img>
           </div>
         </div>
-        <div className="accomodation__container__info">
+        <div className="accomodation__container__bottom">
           <div className="tags">
             <ul>
               {hebergement.tags.map((t) => (
@@ -46,7 +46,7 @@ export default function Accommodation() {
             <Rating rate={hebergement.rating} />
           </div>
         </div>
-        <div className="accordions">
+        <div className="accomodation__container__accordions">
           <Accordion title="Description" content={hebergement.description} />
           <Accordion title="Equipement" content={hebergement.equipments} />
         </div>

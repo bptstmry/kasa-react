@@ -1,69 +1,69 @@
 .accomodation {
-  position: relative;
-  &__image {
-    height: 415px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
+  @include relative-position;
 }
 
-.accomodation__container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.accomodation__container_head {
+  @include flexbox($justify: space-between);
+  margin : {
+    bottom: 15px;
+    top: 20px;
+  }
   .title {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    @include flexbox($direction: column, $gap: 7px);
     h1 {
-      color: #ff6060;
+      color: $primary-color;
+      @include font($weight: 500, $size: 36px);
       margin: 0;
     }
     p {
-        margin: 0;
+      margin: 0;
+      @include font($weight: 500, $size: 18px);
     }
   }
   .host {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include flexbox($align: center, $gap: 10px);
     p {
-      color: #ff6060;
+      color: $primary-color;
+      @include font($weight: 500, $size: 18px);
       white-space: pre-wrap;
-      width:  70px; 
+      width: 70px;
       text-align: right;
     }
     img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        object-fit: cover;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
 }
 
-.accomodation__container__info {
-  display: flex;
-  justify-content: space-between;
-    .tags {
-      width: 55%;
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        .tag {
-            height: 25px;
-            width: 32%;
-            background-color: #ff6060;
-            color: white;
-            margin: 2px;
-            list-style-type: none;
-            display: inline-block;
-            text-align: center;
-            padding-top: 3px;
-            border-radius: 10px;
-        }
+.accomodation__container__bottom {
+  @include flexbox($justify: space-between);
+  margin-bottom: 10px;
+  .tags {
+    width: 70%;
+    ul {
+      margin: 0;
+      padding: 0;
     }
+    .tag {
+      height: auto;
+      width: 20%;
+      @include font($weight: 700, $size: 14px);
+      background-color: $primary-color;
+      color: $white;
+      list-style-type: none;
+      display: inline-block;
+      text-align: center;
+      margin-right: 10px;
+      padding: 7px;
+      border-radius: 10px;
+    }
+  }
+}
+.accomodation__container__accordions {
+  @include flexbox($justify: space-between, $gap: 76px);
+  overflow: hidden;
+  width: 100%;
 }

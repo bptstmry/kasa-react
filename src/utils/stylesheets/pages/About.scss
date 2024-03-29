@@ -1,15 +1,14 @@
-.topp {
-    position: relative;
+.about__top{
+    @include relative-position;
     .banner__img {
       height: 223px;
       width: 100%;
       object-fit: cover;
       border-radius: 20px;
+      margin-bottom: 15px;
     }
 }
-.accordion__about {
+.about__accordion {
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flexbox ($align: center, $direction: column);
 }

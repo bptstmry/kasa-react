@@ -13,3 +13,13 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@media only screen and (max-width: $break) {
+  .bottom {
+    &__banner {
+      @include font ($weight: 500, $size: 12px);
+      text-align: center;
+      width: 133px;
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import "../../utils/style/Rating.scss";
 import star from "../../assets/star.png"
 
 export default function Rating({ rate }) {

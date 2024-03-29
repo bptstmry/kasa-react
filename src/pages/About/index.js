@@ -1,4 +1,4 @@
-import "../../utils/style/About.scss";
+
 import image from "../../assets/image_source_2.png";
 import { aboutListingsData } from "../../datas/aboutListingsData.js";
 import Accordion from "../../components/Accordion";

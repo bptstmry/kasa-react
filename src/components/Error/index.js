@@ -1,4 +1,3 @@
-import "../../utils/style/Error.scss"
 
 export default function Error(){
     return (

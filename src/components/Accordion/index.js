@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../utils/style/Accordion.scss";
 import arrow from "../../assets/arrow.png";
 
 export default function Accordion({ title, content }) {

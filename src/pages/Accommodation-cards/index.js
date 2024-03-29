@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { housingListingsData } from "../../datas/housingListingsData";
-import "../../utils/style/Accommodation-cards.scss";
 import Rating from "../../components/Rating";
 import Accordion from "../../components/Accordion";
 import Carousel from "../../components/Carousel"

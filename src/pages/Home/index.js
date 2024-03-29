@@ -1,5 +1,4 @@
 import image from "../../assets/image_source_1.png";
-import "../../utils/style/Home.scss";
 import { housingListingsData } from "../../datas/housingListingsData";
 import Cards from "../../components/Cards";
 import { Link } from "react-router-dom";

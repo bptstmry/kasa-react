@@ -1,4 +1,3 @@
-import "../../utils/style/Footer.scss";
 import logo_light from "../../assets/logo_light.png";
 
 export default function Footer() {

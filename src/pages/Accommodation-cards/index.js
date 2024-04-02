@@ -42,8 +42,17 @@ export default function Accommodation() {
               ))}
             </ul>
           </div>
-          <div className="stars">
+          <div className="notation">
+            <div className="notation__stars">
             <Rating rate={hebergement.rating} />
+            </div>
+            <div className="notation__host">
+            <p>{hebergement.host.name}</p>
+            <img
+              src={hebergement.host.picture}
+              alt={hebergement.host.name}
+            ></img>
+            </div>
           </div>
         </div>
         <div className="accomodation__container__accordions">

@@ -32,3 +32,23 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media only screen and (max-width: $break) {
+    .accomodation__image {
+        height: 255px;
+    }
+    .carousel {
+        &__position {
+            display: none;
+        }
+    }
+
+    .arrow__left {
+        @include relative-position ($left: -24px, $z-index: 2);
+        width: 18px;
+    }
+    .arrow__right {
+        @include relative-position ($right: -24px, $z-index: 2);
+        width: 18px;
+    }
+}

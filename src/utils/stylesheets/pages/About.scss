@@ -1,14 +1,25 @@
-.about__top{
-    @include relative-position;
-    .banner__img {
-      height: 223px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
+.about__top {
+  @include relative-position;
+  display: flex;
+  flex-direction: column;
+  .banner__img {
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
 }
 .about__accordion {
-    margin-top: 20px;
-    @include flexbox ($align: center, $direction: column);
+  margin-top: 20px;
+  @include flexbox($align: center, $direction: column);
+}
+
+@media only screen and (max-width: $break) {
+  .about__top {
+    .banner__img {
+      height: 121px;
+      margin-bottom: 0;
+    }
+  }
 }

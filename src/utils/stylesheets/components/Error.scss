@@ -17,3 +17,32 @@
     @include font ($weight: 500, $size: 18px);
   }
 }
+
+.br {
+  display: none;
+}
+
+@media only screen and (max-width: $break) {
+  .Error {
+    margin : {
+      top: 113px;
+      bottom: 113px
+    }
+    @include flexbox ($direction: column, $gap: 113px);
+    h1 {
+      @include font ($weight: 700, $size: 98px);
+    }
+    p {
+      @include font ($weight: 500, $size: 18px);
+      text-align: center;
+      width: 260px;
+    }
+    &__link {
+      @include font ($weight:500, $size: 14px);
+      margin: 0;
+    }
+  }
+  .br {
+    display:block;
+  }
+}

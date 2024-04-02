@@ -8,10 +8,10 @@ export default function Rating({ rate }) {
   return (
     <>
       {[...Array(filledStars)].map((_, index) => (
-        <img src={star} key={index}  alt="stars"/>
+        <img src={star} key={index} className="stars" alt="stars"/>
       ))}
       {[...Array(emptyStars)].map((_, index) => (
-        <img src={star} key={index + filledStars} className="gray" alt="stars"/>
+        <img src={star} key={index + filledStars} className="stars gray" alt="stars"/>
       ))}
     </>
   );

@@ -16,6 +16,13 @@
 
 @media only screen and (max-width: $break) {
   .bottom {
+    // position: fixed; /* Assure que le footer reste en bas de l'écran */
+    // left: 0;
+    // bottom: 0;
+    // width: 100%; /* Le footer prend toute la largeur de l'écran */
+    // background-color: black; /* Couleur de fond noire */
+    // color: white; /* Couleur du texte blanc pour la visibilité */
+    
     &__banner {
       @include font ($weight: 500, $size: 12px);
       text-align: center;

@@ -3,18 +3,17 @@ import { housingListingsData } from "../../datas/housingListingsData";
 import Rating from "../../components/Rating";
 import Accordion from "../../components/Accordion";
 import Carousel from "../../components/Carousel";
+import Error from '../../components/Error';
 
 export default function Accommodation() {
   const { id } = useParams();
   const hebergement = housingListingsData.find((h) => h.id === id);
   console.log(hebergement);
 
-  // Vérifiez si l'hébergement correspondant à l'ID existe
   if (!hebergement) {
-    return <div>L'hébergement n'existe pas.</div>;
+    return <Error />;
   }
 
-  // Retournez un élément JSX avec le titre et la description de l'hébergement
   return (
     <div>
       <div className="accomodation">
@@ -44,14 +43,14 @@ export default function Accommodation() {
           </div>
           <div className="notation">
             <div className="notation__stars">
-            <Rating rate={hebergement.rating} />
+              <Rating rate={hebergement.rating} />
             </div>
             <div className="notation__host">
-            <p>{hebergement.host.name}</p>
-            <img
-              src={hebergement.host.picture}
-              alt={hebergement.host.name}
-            ></img>
+              <p>{hebergement.host.name}</p>
+              <img
+                src={hebergement.host.picture}
+                alt={hebergement.host.name}
+              ></img>
             </div>
           </div>
         </div>

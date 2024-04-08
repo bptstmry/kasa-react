@@ -2,6 +2,12 @@
   @include relative-position;
   height: 209px;
   background-color: $black;
+  // position: fixed; /* Assure que le footer reste en bas de l'écran */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Le footer prend toute la largeur de l'écran */
+  // background-color: black; /* Couleur de fond noire */
+  // color: white; /* Couleur du texte blanc pour la visibilité */
   &__img {
     @include absolute-position ($top: 45%, $left: 50%);
     transform: translate(-50%, -50%);
@@ -15,14 +21,7 @@
 }
 
 @media only screen and (max-width: $break) {
-  .bottom {
-    // position: fixed; /* Assure que le footer reste en bas de l'écran */
-    // left: 0;
-    // bottom: 0;
-    // width: 100%; /* Le footer prend toute la largeur de l'écran */
-    // background-color: black; /* Couleur de fond noire */
-    // color: white; /* Couleur du texte blanc pour la visibilité */
-    
+  .bottom { 
     &__banner {
       @include font ($weight: 500, $size: 12px);
       text-align: center;

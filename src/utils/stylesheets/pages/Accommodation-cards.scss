@@ -21,13 +21,14 @@
     }
   }
   .host {
-    @include flexbox($align: center, $gap: 10px);
+    @include flexbox($align: center);
     p {
       color: $primary-color;
       @include font($weight: 500, $size: 18px);
       white-space: pre-wrap;
-      width: 70px;
+      width: 90px;
       text-align: right;
+      margin-right: 10px;
     }
     img {
       width: 64px;

@@ -16,6 +16,8 @@
     @include font ($weight: 700, $size: 18px);
     color: $white;
     z-index: 2;
+    width: auto;
+    max-width: 200px;
   }
   &__overlay {
     @include absolute-position($top:0, $left:0);
